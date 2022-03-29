@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\bin\Release\Images\18plus.ico
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\bin\Release\ForbiddenWords.exe.config
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\bin\Release\ForbiddenWords.exe
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\bin\Release\ForbiddenWords.pdb
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.Form1.resources
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.Properties.Resources.resources
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.csproj.GenerateResource.cache
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.exe
+C:\Users\user\source\repos\ForbiddenWords\ForbiddenWords\obj\Release\ForbiddenWords.pdb
