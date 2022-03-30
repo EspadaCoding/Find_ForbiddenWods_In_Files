@@ -51,7 +51,7 @@ namespace ForbiddenWords
         public void FindFile(object obj)
         {
             string path = obj as string;
-            try { label_Redaction.Text = "Поиск файлов ..."; }
+            try { label_Redaction.Text = "Search for files ..."; }
             catch (Exception) { }
             
             try
@@ -85,7 +85,7 @@ namespace ForbiddenWords
 
         public void FindWords(object obj)
         {
-            try { label_Redaction.Text = "Редактирование файла:"; }
+            try { label_Redaction.Text = "Editing a file:"; }
             catch (Exception) { }
             var collection = obj as List<string>;
             foreach (var item in collection)
@@ -146,7 +146,7 @@ namespace ForbiddenWords
                             progressBar1.Value = 100;
                         });
                     }
-                    reporter.Append($"#{CountOfFiles}\nИмя Файла - {FileName}\nПуть файла - {path}\nРазмер файла = {FileSize}byte(s)\nКоличество замен = {CountOfChanges} штук(а)\n\n");
+                    reporter.Append($"#{CountOfFiles}\nFile Name - {FileName}\nFile path - {path}\nFile Size = {FileSize}byte(s)\nNumber of substitutions = {CountOfChanges} pieces\n\n");
                     richTextBox1.Invoke((MethodInvoker)delegate
                     {
                         richTextBox1.Text = reporter.ToString();
@@ -159,13 +159,13 @@ namespace ForbiddenWords
 
         public void SaveReport()
         {
-            reporter.Append($"\n\nВсего файлов: {CountOfFiles}");
+            reporter.Append($"\n\nTotal files: {CountOfFiles}");
             richTextBox1.Invoke((MethodInvoker)delegate
             {
                 richTextBox1.Text = reporter.ToString();
             });
             Model.ReaderWriterLock.WriteData(ReportPath, reporter);
-            MessageBox.Show($"{TruePath.Count} Файлы прошли проверку!", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"{TruePath.Count} The files have been verified!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void ClearData()
@@ -209,7 +209,7 @@ namespace ForbiddenWords
                     {
                         Finder.Start(textBox_Path.Text);
                     }
-                    else MessageBox.Show("Введите путь!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else MessageBox.Show("Enter the path!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else if (Finder.ThreadState == ThreadState.Unstarted || Finder.ThreadState == ThreadState.Stopped || Finder.ThreadState == ThreadState.Aborted)
@@ -230,14 +230,14 @@ namespace ForbiddenWords
                             {
                                 Finder.Start(textBox_Path.Text);
                             }
-                            else MessageBox.Show("Введите путь!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            else MessageBox.Show("Enter the path!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
-                    else MessageBox.Show("Поиск уже начат!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else MessageBox.Show("The search has already started!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else MessageBox.Show("Поиск уже начат!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else MessageBox.Show("The search has already started!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else MessageBox.Show("Поиск уже начат!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else MessageBox.Show("The search has already started!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void button_Stop_Click(object sender, EventArgs e)
@@ -275,6 +275,6 @@ namespace ForbiddenWords
                 }
             }
             catch (Exception) { }
-        }
+        } 
     }
 }
